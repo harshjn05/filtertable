@@ -13,9 +13,6 @@ export const Alphaaa =()=>{
   const sidebar = 'columns'
   const defaultColDef = useMemo( ()=> ( {
     sortable:true,
-    filter:true,
-    floatingFilter:true
-    
   }), []);
   const [gridApi, setGridApi] = useState(null);
   const [gridColumnApi, setGridColumnApi] = useState(null);
