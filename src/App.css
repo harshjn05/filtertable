@@ -12,6 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.head11 img {
+  position: fixed;
+  width: 35px;
+  height: 56px;
+left: 2%;
+}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -29,7 +37,7 @@
 }
 .btn{
   padding: 6px 12px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 40;
   white-space: nowrap;
   -ms-touch-action: manipulation;
@@ -40,7 +48,6 @@
   -ms-user-select: none;
   user-select: none;
   background-image: none;
-  border: 1px solid transparent;
   text-decoration: none;
 
   color: #333;
