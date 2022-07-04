@@ -1,6 +1,9 @@
 import { Link } from "@material-ui/core";
+import data from './DATA12.json'
+const dataa =data
 
 export const COLUMNS = [
+
       {
         headerName: 'Queue',
         field: 'queue',
@@ -228,12 +231,16 @@ export const COLUMNS = [
     filter: true,
   }, 
   {
+    headerName: 'Comment',
+    field: 'comment',
+
+  },
+  {
     headerName: ' Click here to Download',
-    field: 'download',
-    cellRenderer:rowData=><Link href={`https://google.com`} target="_blank">Google</Link>,
+    field: 'trade_id',
+    cellRenderer:rowData=><Link href={`https://google.com?userid=${dataa.trade_id}`} target="_blank">Google</Link>,
     pinned: 'right'
   },
-
   ]
   
   

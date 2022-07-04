@@ -3,13 +3,13 @@ import {AgGridReact} from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import data from './DATA12.json'
-import React, {useState, useRef, useEffect, useMemo, useCallback} from 'react';
+import React, {useState, useRef, useMemo} from 'react';
 import {COLUMNS} from './Tab_columns'
 
 export const Alphaaa =()=>{
     const dataa= data
   const gridRef = useRef();
-  const [columnDefs, setColumnDefs] = useState( COLUMNS)
+  const [columnDefs] = useState( COLUMNS)
   const sidebar = 'columns'
   const defaultColDef = useMemo( ()=> ( {
     sortable:true,
@@ -30,20 +30,6 @@ export const Alphaaa =()=>{
     gridApi.exportDataAsCsv();
   }
 
-  const savedFilterState = useRef();
-/*
-  const onBtSave = useCallback( ()=> {
-    const filterModel = gridRef.current.api.getFilterModel();
-    console.log('Saving Filter Model', filterModel);
-    savedFilterState.current = filterModel;
-  }, []);
-
-  const onBtApply = useCallback( ()=> {
-    const filterModel = savedFilterState.current;
-    console.log('Applying Filter Model', filterModel);
-    gridRef.current.api.setFilterModel(filterModel);
-  }, []);
-  */
   return (
     <>
      
@@ -60,7 +46,6 @@ export const Alphaaa =()=>{
             pagination={true}
             alwaysShowHorizontalScroll={true}
             domLayout={'fixedHeight'}
-
             paginationPageSize={50}     
             onGridReady={onGridReady}
             sideBar={sidebar}
