@@ -1,6 +1,9 @@
 import { Link } from "@material-ui/core";
-import data from './DATA12.json'
-const dataa =data
+import './App.css';
+
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 
 export const COLUMNS = [
 
@@ -217,28 +220,34 @@ export const COLUMNS = [
     floatingFilter : true,
     filter: true,
   }, 
+
   {
     headerName: ' Draft Owner',
     field: 'draft_owner',
     floatingFilter : true,
     filter: true,
   }, 
-  
   {
     headerName: ' Check Owner',
     field: 'check_owner',
     floatingFilter : true,
     filter: true,
+    
   }, 
   {
     headerName: 'Comment',
-    field: 'comment',
-
+    field: 'draft_owner',
+    cellRenderer:rowData=><div>
+    <Popup contentStyle={{width: "300px"}} trigger={<button> Read Comment </button>} 
+      >
+      <div>{rowData.data.draft_owner}</div>
+    </Popup>
+</div>
   },
   {
-    headerName: ' Click here to Download',
-    field: 'trade_id',
-    cellRenderer:rowData=><Link href={`https://google.com?userid=${dataa.trade_id}`} target="_blank">Google</Link>,
+    headerName: 'Download File',
+    field: 'instr_ref',
+    cellRenderer:rowData=><Link href={`https://google.com?userid=${rowData.data.trade_id}`} target="_blank"><button >Download</button></Link>,
     pinned: 'right'
   },
   ]
