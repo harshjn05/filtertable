@@ -5,7 +5,7 @@ import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 import data from './DATA12.json'
 import React, {useState, useRef, useMemo,} from 'react';
 import {COLUMNS} from './Tab_columns';
-
+import img from './logoo.png'
 
 export const Alphaaa =()=>{
     const dataa= data
@@ -18,9 +18,8 @@ export const Alphaaa =()=>{
     };
   }, []);
   const [gridApi, setGridApi] = useState(null);
-  const [gridColumnApi, setGridColumnApi] = useState(null);
-  const searchDivStyle={backgroundColor:"#dedede",padding:5}
-  const searchStyle={width:"1000",padding:"5px 20px",borderRadius:5,outline:0,
+  const [setGridColumnApi] = useState(null);
+  const searchStyle={width:"1000",align: 'center', padding:"5px 20px",borderRadius:5,outline:0,
   border:"2px grey solid",fontSize:"100%"}
     function onGridReady(params) {
       setGridApi(params.api);
@@ -32,13 +31,20 @@ export const Alphaaa =()=>{
   const onExportClick=()=>{
     gridApi.exportDataAsCsv();
   }
+  const user_name='Harsh Jain'
+  const BankID='989898'
 
   return (
     <>
-
-    <div style={searchDivStyle}>
-    <input type="search" style={searchStyle} onChange={onFilterTextChange} placeholder="Search here" />
-    <button className='btn' style={{float: 'right'}} onClick={()=>onExportClick()}>Export Trade Data</button>
+      <div className="head11" >
+      <p>Username:<b> {user_name} </b><br/> Bank ID: <b>{BankID} </b></p>
+        <img src={img} alt="logo" />
+        <h1>Shape EQD Archival GUI<br/></h1>
+      </div>
+      <hr/>
+    <div className='searchbar' >
+    <input type="search" style={searchStyle} hidden='true' onChange={onFilterTextChange} placeholder="Search here" />
+    <button className='btn'  onClick={()=>onExportClick()}>Export Trade Data</button>
 </div>
     <div style={{height: '100'}}>
 

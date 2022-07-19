@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -12,12 +10,24 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.searchbar {
+  text-align: right;}
+  .head11 p {
+    float: right;
+    margin-right: 2%;
+    margin-top: 0%;
+    }
+
+.head11 h1 {
+  margin-left: 35%;
+  }
+
 .head11 img {
-  position: fixed;
-  width: 35px;
+  float: left;
+  width: 144px;
   height: 56px;
-left: 2%;
-}
+  margin-left: 2%;}
 
 
 
@@ -43,6 +53,7 @@ left: 2%;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
+  margin-bottom: 0.5%;
 
 
   color: #333;
