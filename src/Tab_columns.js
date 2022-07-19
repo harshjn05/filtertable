@@ -1,4 +1,3 @@
-import { Link } from "@material-ui/core";
 import './App.css';
 
 import Popup from 'reactjs-popup';
@@ -247,8 +246,8 @@ export const COLUMNS = [
   {
     headerName: 'Download File',
     field: 'instr_ref',
-    cellRenderer:rowData=><Link href={`https://google.com?userid=${rowData.data.trade_id}`} target="_blank"><button >Download</button></Link>,
-    pinned: 'right'
+    cellRenderer:rowData=><a href={`https://google.com?userid=${rowData.data.trade_id}`} target="_blank" rel="noreferrer"><button >Download</button></a>,
+    pinned: 'right',
   },
   ]
   
